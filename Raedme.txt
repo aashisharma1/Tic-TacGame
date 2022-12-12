@@ -1,0 +1,15 @@
+
+*************************Radme***************************
+Version 1.0:
+1.Hey This is my first complete android studio project in Java Language
+2.I will try to upadte this tia tac app regular 
+3.Please follow me.
+4. I try to add new featuresand make this as Simple as possible in future for now their is only 2 classes 
+4.Thanks you.
+
+
+Version 1.2
+1) I will try to add AI-Bot in next update
+2. U will Try to follow and Re-structured this Complete Project Accourding to Coding Standards
+3. Try to Improve UI
+
