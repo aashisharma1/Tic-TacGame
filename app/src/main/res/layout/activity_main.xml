@@ -27,6 +27,7 @@
           android:id="@+id/rgP1"
           android:layout_marginRight="25dp"
           android:textSize="17dp"
+          android:textAllCaps="true"
           style="@style/TextAppearance.Material3.TitleMedium"
           android:layout_weight="2"
           android:layout_height="wrap_content">
@@ -36,6 +37,7 @@
           android:text="Player 2"
           android:id="@+id/rgP2"
           android:layout_weight="2"
+          android:textAllCaps="true"
           android:layout_marginLeft="15dp"
           android:textSize="17dp"
           style="@style/TextAppearance.Material3.TitleMedium"
