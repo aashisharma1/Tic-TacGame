@@ -4,20 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:gravity="center"
-    android:background="@drawable/background"
+    android:background="@color/whiteLight"
     android:orientation="vertical"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="25dp"
+    android:layout_height="wrap_content">
+   <RadioGroup
+       android:layout_width="wrap_content"
+       android:weightSum="4"
+       android:id="@+id/Rgroup"
+       android:gravity="center"
+       android:orientation="horizontal"
+       android:layout_height="match_parent">
+      <RadioButton
+          android:layout_width="wrap_content"
+          android:text="Player 1"
+          android:id="@+id/rgP1"
+          android:layout_marginRight="25dp"
+          android:textSize="17dp"
+          style="@style/TextAppearance.Material3.TitleMedium"
+          android:layout_weight="2"
+          android:layout_height="wrap_content">
+      </RadioButton>
+      <RadioButton
+          android:layout_width="wrap_content"
+          android:text="Player 2"
+          android:id="@+id/rgP2"
+          android:layout_weight="2"
+          android:layout_marginLeft="15dp"
+          android:textSize="17dp"
+          style="@style/TextAppearance.Material3.TitleMedium"
+          android:layout_height="wrap_content">
 
+      </RadioButton>
+
+   </RadioGroup>
+
+</LinearLayout>
   <GridLayout
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:columnCount="3"
-      android:layout_marginStart="54dp"
       android:rowCount="3"
-
-      android:layout_height="400dp">
+      android:layout_height="wrap_content">
 
      <com.google.android.material.card.MaterialCardView
          android:layout_height="60dp"
@@ -224,41 +257,58 @@
 
 
   </GridLayout>
-   <LinearLayout
-       android:layout_width="match_parent"
+
+
+   <com.google.android.material.card.MaterialCardView
+
+       android:layout_width="220dp"
        android:orientation="horizontal"
-       android:layout_height="wrap_content">
+       app:cardCornerRadius="12dp"
+       android:layout_marginTop="50dp"
+       android:layout_height="45dp">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:gravity="center"
+          android:layout_height="match_parent">
       <ImageView
-          android:layout_width="50dp"
+          android:layout_width="40dp"
           android:clickable="true"
+          android:layout_centerVertical="true"
           android:contentDescription="@string/Descp"
-          android:layout_marginStart="75dp"
+
           android:id="@+id/repeat"
           android:src="@drawable/repeat_24"
-          android:layout_height="50dp">
+          android:layout_height="38dp">
 
       </ImageView>
       <ImageView
-          android:layout_width="50dp"
-          android:layout_marginStart="39dp"
+          android:layout_width="40dp"
+          android:layout_toRightOf="@+id/repeat"
+          android:layout_marginStart="25dp"
           android:contentDescription="@string/Descp"
           android:id="@+id/mood"
+          android:layout_centerVertical="true"
           android:src="@drawable/mood_happy"
-          android:layout_height="50dp">
+          android:layout_height="38dp">
 
       </ImageView>
       <ImageView
-          android:layout_width="50dp"
-          android:layout_marginStart="39dp"
+          android:layout_width="40dp"
+          android:layout_marginStart="25dp"
+          android:layout_toRightOf="@+id/mood"
           android:contentDescription="@string/Descp"
           android:id="@+id/Exit"
           android:clickable="true"
+          android:layout_centerVertical="true"
           android:src="@drawable/ic_baseline_exit"
-          android:layout_height="50dp">
+          android:layout_height="38dp">
 
       </ImageView>
+</RelativeLayout>
 
-   </LinearLayout>
+   </com.google.android.material.card.MaterialCardView>
+
+
    <LinearLayout
        android:layout_width="match_parent"
        android:orientation="horizontal"
@@ -278,7 +328,7 @@
           android:textSize="19sp"
           android:id="@+id/follow"
           style="@style/TextAppearance.Material3.TitleMedium"
-          android:textColor="@color/white"
+          android:textColor="@color/black"
           android:clickable="true"
           android:layout_marginLeft="8dp"
           android:layout_height="wrap_content">

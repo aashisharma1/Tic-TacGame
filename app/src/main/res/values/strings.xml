@@ -2,4 +2,8 @@
     <string name="app_name">Tic-Tac Game</string>
     <string name="Descp">Their is a Icon</string>
     <string name="insta">Follow us</string>
+    <string name="hintPlayer1">1st Player Name</string>
+    <string name="hintPlayer2">2nd Player Name</string>
+    <string name="play">Play</string>
+    <string name="tia_tac_play">Tia-Tac Play</string>
 </resources>

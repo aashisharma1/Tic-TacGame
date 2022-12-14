@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,7 +18,10 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,12 +29,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
-int flag=0;
+ int flag=0;
  TextView t1,t2,t3,t4,t5,t6,t7,t8,t9 ,t,tt,ttt ,fol;
  int gameEndded=100;
  int count=0;
  static  boolean Exit=false;
  ImageView imgM ,repeat,exit;
+ RadioGroup rGroup;
+ RadioButton rb1,rb2;
+ Dialog dialog;
+
 
  String tt1,tt2,tt3,tt4,tt5,tt6,tt7,tt8,tt9;
     @Override
@@ -54,6 +62,15 @@ int flag=0;
         exit=(ImageView) findViewById(R.id.Exit);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/part.ttf");
         fol.setTypeface(type);
+
+
+       CustomName customName= new CustomName(this,"test");
+    customName.okok();
+
+    rGroup=(RadioGroup)findViewById(R.id.Rgroup);
+    rb1=(RadioButton)findViewById(R.id.rgP1);
+        rb2=(RadioButton)findViewById(R.id.rgP2);
+        getValuee();
 
         fol.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +99,21 @@ int flag=0;
         });
     }
 
+    private void getValuee() {
+        if(flag==0){
+            rGroup.check(rb2.getId());
+
+        }else if(flag==1){
+
+            rGroup.check(rb1.getId());
+
+        }
+    }
+
+
+    ///////////////////
+
+
 
     public void check(View view) {
 
@@ -91,11 +123,17 @@ int flag=0;
             if (txtchng.getText().equals("")) {
                 if (flag == 0) {
                     txtchng.setText("0");
+                   // rGroup.check(rb1.getId());
+
                     flag = 1;
+                    getValuee();
                     count++;
                 } else {
                     txtchng.setText("X");
+                   // rGroup.check(rb2.getId());
+
                     flag = 0;
+                    getValuee();
                     count++;
                 }
             } else {
@@ -159,6 +197,7 @@ int flag=0;
         this.t=t;
         this.tt=tt;
         this.ttt=ttt;
+        rGroup.clearCheck();
         changeColour(t,ttt,tt);
         final Animation anim = AnimationUtils.loadAnimation(this, R.anim.alphs);
         anim .setFillAfter(true);
@@ -193,6 +232,7 @@ int flag=0;
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
+               getValuee();
                 gameEndded=100;
                 t1.setText("");
                 t2.setText("");
