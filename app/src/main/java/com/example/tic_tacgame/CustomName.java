@@ -60,7 +60,7 @@ public class CustomName {
       RadioButton radioButton=mainActivity.findViewById(R.id.rgP1);
       radioButton.setText(add[0]);
         RadioButton radioButton1=mainActivity.findViewById(R.id.rgP2);
-        radioButton1.setText(add[0]);
+        radioButton1.setText(add[1]);
         radioButton.getId();
         RadioGroup radioGroup=mainActivity.findViewById(R.id.Rgroup);
 
