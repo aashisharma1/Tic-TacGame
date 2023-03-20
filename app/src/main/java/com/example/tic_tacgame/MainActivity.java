@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
 
        CustomName customName= new CustomName(this,"test");
-    customName.okok();
+       customName.okok();
 
     rGroup=(RadioGroup)findViewById(R.id.Rgroup);
     rb1=(RadioButton)findViewById(R.id.rgP1);

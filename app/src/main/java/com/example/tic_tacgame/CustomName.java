@@ -28,8 +28,8 @@ public class CustomName {
        dialog = new Dialog(mainActivity);
   dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.custom_name_ask_dialoge);
-        dialog.setCancelable(false);
-       com.google.android.material.card.MaterialCardView cardView=(com.google.android.material.card.MaterialCardView) dialog.findViewById(R.id.playBtn);
+        dialog.setCancelable(true);
+       com.google.android.material.button.MaterialButton cardView=(com.google.android.material.button.MaterialButton) dialog.findViewById(R.id.playBtn);
        EditText editText=(EditText) dialog.findViewById(R.id.play1);
        EditText editText1= (EditText) dialog.findViewById(R.id.play2);
 

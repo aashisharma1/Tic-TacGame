@@ -1,65 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:id="@+id/customR"
-    android:padding="10dp"
     android:background="@color/white"
     android:layout_height="match_parent">
-    <EditText
-        android:layout_width="wrap_content"
-        android:id="@+id/play1"
-        android:hint="@string/hintPlayer1"
-        style="@style/TextAppearance.Material3.TitleMedium"
-        android:textSize="13sp"
-        android:paddingEnd="5dp"
-        android:paddingStart="7dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_border"
-        android:textColorHint="@color/DarkBlack"
-        android:layout_height="37dp">
-
-    </EditText>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_toEndOf="@+id/play1"
-        android:id="@+id/play2"
-        android:hint="@string/hintPlayer2"
-        style="@style/TextAppearance.Material3.TitleMedium"
-        android:textSize="13sp"
-        android:paddingEnd="5dp"
-        android:paddingStart="7dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edit_text_border"
-        android:textColorHint="@color/DarkBlack"
-        android:layout_height="37dp">
-
-    </EditText>
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="90dp"
-        android:id="@+id/playBtn"
-        android:clickable="true"
-        app:cardCornerRadius="6dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginStart="200dp"
-        app:cardBackgroundColor="@color/ParrotGreen"
-        android:layout_below="@id/play2"
-        android:layout_height="37dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:layout_margin="20dp"
+        android:id="@+id/layuttt"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
-            android:text="@string/play"
-            android:clickable="false"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:layout_gravity="center"
+            android:id="@+id/play1"
+            android:hint="@string/hintPlayer1"
             style="@style/TextAppearance.Material3.TitleMedium"
-            android:textSize="22sp"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.card.MaterialCardView>
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:paddingEnd="5dp"
+            android:layout_marginEnd="4dp"
+            android:paddingStart="7dp"
+            android:background="@drawable/edit_text_border"
+            android:textColorHint="@color/DarkBlack"
+            android:layout_height="37dp">
+
+        </EditText>
+        <EditText
+            android:layout_width="wrap_content"
+            android:id="@+id/play2"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:hint="@string/hintPlayer2"
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:textSize="13sp"
+            android:paddingEnd="5dp"
+            android:paddingStart="7dp"
+            android:background="@drawable/edit_text_border"
+            android:textColorHint="@color/DarkBlack"
+            android:layout_height="37dp"
+            android:autofillHints=""
+            tools:ignore="TextFields">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:text="@string/play"
+        android:layout_below="@id/layuttt"
+        android:id="@+id/playBtn"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_height="wrap_content"/>
+
+
+
+
 
 
 
